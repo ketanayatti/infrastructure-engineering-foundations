@@ -43,17 +43,17 @@ Kubernetes and Terraform represent the core of modern infrastructure automation.
 
 This index links to living artifacts as they are published.
 
-| Artifact | Purpose | Status |
-| --- | --- | --- |
-| [notes.md](notes.md) | Operational summaries and reference patterns | Active |
-| [commands.md](commands.md) | Curated commands with context | Active |
-| [learnings.md](learnings.md) | Key insights and tradeoffs | Active |
-| [mistakes.md](mistakes.md) | Pitfalls and corrections | Active |
-| [experiments/](experiments/) | Orchestration and IaC trials | Planned |
-| [diagrams/](diagrams/) | Cluster and lifecycle visuals | Planned |
-| [manifests/](manifests/) | Kubernetes resource declarations | Planned |
-| [terraform/](terraform/) | Infrastructure provisioning code | Planned |
-| [scripts/](scripts/) | Automation helpers | Planned |
+| Artifact                     | Purpose                                      | Status  |
+| ---------------------------- | -------------------------------------------- | ------- |
+| [notes.md](notes.md)         | Operational summaries and reference patterns | Active  |
+| [commands.md](commands.md)   | Curated commands with context                | Active  |
+| [learnings.md](learnings.md) | Key insights and tradeoffs                   | Active  |
+| [mistakes.md](mistakes.md)   | Pitfalls and corrections                     | Active  |
+| [experiments/](experiments/) | Orchestration and IaC trials                 | Planned |
+| [diagrams/](diagrams/)       | Cluster and lifecycle visuals                | Planned |
+| [manifests/](manifests/)     | Kubernetes resource declarations             | Planned |
+| [terraform/](terraform/)     | Infrastructure provisioning code             | Planned |
+| [scripts/](scripts/)         | Automation helpers                           | Planned |
 
 ## Why Orchestration Became Necessary
 
@@ -88,16 +88,16 @@ This index links to living artifacts as they are published.
 
 ## Kubernetes Building Blocks
 
-| Component | Purpose | Operational relevance |
-| --- | --- | --- |
-| Pods | Execution unit | Resource isolation and lifecycle control |
-| Deployments | Desired state for replicas | Safe rollouts and rollbacks |
-| Services | Stable networking identity | Resilience and discovery |
-| Ingress | L7 routing and TLS | External traffic control |
-| ConfigMaps | Non-secret configuration | Change management |
-| Secrets | Sensitive configuration | Access control |
-| Autoscaling | Dynamic capacity | Cost and stability balance |
-| Helm | Package management | Standardized releases |
+| Component   | Purpose                    | Operational relevance                    |
+| ----------- | -------------------------- | ---------------------------------------- |
+| Pods        | Execution unit             | Resource isolation and lifecycle control |
+| Deployments | Desired state for replicas | Safe rollouts and rollbacks              |
+| Services    | Stable networking identity | Resilience and discovery                 |
+| Ingress     | L7 routing and TLS         | External traffic control                 |
+| ConfigMaps  | Non-secret configuration   | Change management                        |
+| Secrets     | Sensitive configuration    | Access control                           |
+| Autoscaling | Dynamic capacity           | Cost and stability balance               |
+| Helm        | Package management         | Standardized releases                    |
 
 ## Kubernetes Operational Workflows
 
@@ -143,23 +143,23 @@ flowchart LR
 
 ## Learning Roadmap
 
-| Phase | Focus | Output |
-| --- | --- | --- |
-| 1 | Kubernetes primitives and workloads | Notes and workload examples |
-| 2 | Networking and ingress | Architecture diagrams |
-| 3 | Helm packaging and release flow | Release notes and diagrams |
-| 4 | Terraform fundamentals | IaC notes and experiments |
-| 5 | Operational workflows | Operational checklists and learnings |
+| Phase | Focus                               | Output                               |
+| ----- | ----------------------------------- | ------------------------------------ |
+| 1     | Kubernetes primitives and workloads | Notes and workload examples          |
+| 2     | Networking and ingress              | Architecture diagrams                |
+| 3     | Helm packaging and release flow     | Release notes and diagrams           |
+| 4     | Terraform fundamentals              | IaC notes and experiments            |
+| 5     | Operational workflows               | Operational checklists and learnings |
 
 ## Infrastructure Maturity Progression
 
-| Level | Characteristics | Evidence |
-| --- | --- | --- |
-| 1 | Manual provisioning | Scripts and notes |
-| 2 | Basic IaC | IaC notes and scripts |
-| 3 | Automated rollouts | Release notes and checklists |
-| 4 | Reliability controls | SLO-aligned scaling |
-| 5 | Continuous reconciliation | Drift detection and GitOps |
+| Level | Characteristics           | Evidence                     |
+| ----- | ------------------------- | ---------------------------- |
+| 1     | Manual provisioning       | Scripts and notes            |
+| 2     | Basic IaC                 | IaC notes and scripts        |
+| 3     | Automated rollouts        | Release notes and checklists |
+| 4     | Reliability controls      | SLO-aligned scaling          |
+| 5     | Continuous reconciliation | Drift detection and GitOps   |
 
 ## Experiment Tracking
 
@@ -190,12 +190,12 @@ Future work will explore GitOps tooling to automate cluster reconciliation, ensu
 
 ## Progress Tracking
 
-| Area | Status | Evidence |
-| --- | --- | --- |
-| Kubernetes core primitives | In progress | [notes.md](notes.md) |
-| Kubernetes networking | Planned | [diagrams/](diagrams/) |
-| Helm packaging | Planned | [experiments/](experiments/) |
-| Terraform state management | Planned | [learnings.md](learnings.md) |
+| Area                       | Status      | Evidence                     |
+| -------------------------- | ----------- | ---------------------------- |
+| Kubernetes core primitives | In progress | [notes.md](notes.md)         |
+| Kubernetes networking      | Planned     | [diagrams/](diagrams/)       |
+| Helm packaging             | Planned     | [experiments/](experiments/) |
+| Terraform state management | Planned     | [learnings.md](learnings.md) |
 
 Progress is reflected in Git history and updates to [notes.md](notes.md), [learnings.md](learnings.md), and [mistakes.md](mistakes.md).
 
@@ -205,4 +205,3 @@ Progress is reflected in Git history and updates to [notes.md](notes.md), [learn
 - Implement policy controls for IaC changes.
 - Expand reliability practices with rollout safety checks.
 - Introduce GitOps workflows with audit trails.
-

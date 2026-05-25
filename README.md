@@ -59,11 +59,11 @@ Infrastructure Engineering Foundations is a public, operational engineering lab.
 
 ## Infrastructure, Automation, Reliability Pillars
 
-| Pillar | Scope | Outcomes |
-| --- | --- | --- |
+| Pillar         | Scope                                        | Outcomes                                        |
+| -------------- | -------------------------------------------- | ----------------------------------------------- |
 | Infrastructure | Linux, networking, compute, storage, runtime | Predictable, observable infrastructure behavior |
-| Automation | CI/CD, IaC, scripting, workflows | Repeatability, safer change velocity |
-| Reliability | Observability, SLOs, failure modes | Operational confidence and resilience |
+| Automation     | CI/CD, IaC, scripting, workflows             | Repeatability, safer change velocity            |
+| Reliability    | Observability, SLOs, failure modes           | Operational confidence and resilience           |
 
 ## Learning Roadmap
 

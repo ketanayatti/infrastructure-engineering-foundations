@@ -38,15 +38,81 @@ Linux and networking are the operational substrate of infrastructure. This modul
 
 This index links to living artifacts as they are published.
 
-| Artifact | Purpose | Status |
-| --- | --- | --- |
-| [notes.md](notes.md) | Operational notes and references | Active |
-| [commands.md](commands.md) | Curated commands with context | Active |
-| [learnings.md](learnings.md) | Key insights and tradeoffs | Active |
-| [mistakes.md](mistakes.md) | Pitfalls and corrections | Active |
-| [experiments/](experiments/) | Reproducible tests and results | Planned |
-| [diagrams/](diagrams/) | Architecture and flow visuals | Planned |
-| [scripts/](scripts/) | Diagnostics and automation helpers | Planned |
+| Artifact                     | Purpose                            | Status  |
+| ---------------------------- | ---------------------------------- | ------- |
+| [notes.md](notes.md)         | Operational notes and references   | Active  |
+| [commands.md](commands.md)   | Curated commands with context      | Active  |
+| [learnings.md](learnings.md) | Key insights and tradeoffs         | Active  |
+| [mistakes.md](mistakes.md)   | Pitfalls and corrections           | Active  |
+| [experiments/](experiments/) | Reproducible tests and results     | Active  |
+| [diagrams/](diagrams/)       | Architecture and flow visuals      | Planned |
+| [scripts/](scripts/)         | Diagnostics and automation helpers | Planned |
+
+## Topics Covered
+
+### Fundamentals
+
+- Linux kernel and system architecture (kernel, shell, filesystem, processes, services)
+- System components and their operational roles
+
+### Filesystem
+
+- Directory structure and purpose (`/`, `/home`, `/etc`, `/var`, `/tmp`, `/bin`, `/usr`, `/proc`, `/dev`)
+- Basic filesystem commands and navigation
+
+### Permissions & Ownership
+
+- File permission model (symbolic and numeric notation)
+- Permission types (read, write, execute) and their operational meaning
+- User, group, and other permission levels
+- File type indicators (regular file, directory, link)
+- Ownership and chown operations
+- Recursive permission changes
+
+### Users & Groups
+
+- User creation and lifecycle management
+- Group operations and membership
+- Sudo access and privilege escalation
+- Home directory provisioning and shell configuration
+- User verification and debugging
+
+### Processes
+
+- Process lifecycle and state transitions
+- Running, background, and foreground processes
+- Process inspection tools (ps, top, htop)
+- Process termination (graceful and forced)
+- Signal handling and lifecycle management
+
+### System Services
+
+- systemd architecture and PID 1
+- Service lifecycle management (start, stop, restart, reload)
+- Service boot behavior (enable, disable)
+- Service logging with journalctl
+- Service debugging and failure diagnosis
+- Port binding and conflict resolution
+
+## Recommended Learning Progression
+
+```
+Linux Basics
+    ↓
+Filesystem & Commands
+    ↓
+Permissions & Ownership
+    ↓
+Users & Groups
+    ↓
+Process Management
+    ↓
+System Services & systemd
+    ↓
+Logging & Debugging
+    ↓
+Networking Foundations
+```
 
 ## Why Linux Matters in Infrastructure Engineering
 
@@ -66,19 +132,19 @@ Linux internals shape reliability. Kernel scheduling, file descriptors, memory p
 
 ## Operational Focus Areas
 
-| Area | Focus | Operational relevance |
-| --- | --- | --- |
-| Process management | Scheduling, signals, limits, cgroups | Service stability and resource isolation |
-| System services | systemd units, dependencies, restarts | Predictable lifecycle control |
-| Logs | journald, syslog, rotation | Incident evidence and root cause tracing |
-| DNS | Resolver path, caching, TTLs | Latency and outage prevention |
-| TCP/IP | Handshake, retransmits, timeouts, MTU | Explains latency and packet loss |
-| Ports | Listening sockets, ephemeral range, firewalls | Service reachability and isolation |
-| SSH | Access control, bastions, audit | Secure operational access |
-| HTTP/HTTPS | TLS, keepalive, headers | Service integrity and performance |
-| WebSocket networking | Long-lived connections, backpressure | Capacity planning and stability |
-| Reverse proxies | Nginx, HAProxy, routing | Traffic control and security |
-| Load balancing basics | L4/L7, health checks, failover | Resilience and scale |
+| Area                  | Focus                                         | Operational relevance                    |
+| --------------------- | --------------------------------------------- | ---------------------------------------- |
+| Process management    | Scheduling, signals, limits, cgroups          | Service stability and resource isolation |
+| System services       | systemd units, dependencies, restarts         | Predictable lifecycle control            |
+| Logs                  | journald, syslog, rotation                    | Incident evidence and root cause tracing |
+| DNS                   | Resolver path, caching, TTLs                  | Latency and outage prevention            |
+| TCP/IP                | Handshake, retransmits, timeouts, MTU         | Explains latency and packet loss         |
+| Ports                 | Listening sockets, ephemeral range, firewalls | Service reachability and isolation       |
+| SSH                   | Access control, bastions, audit               | Secure operational access                |
+| HTTP/HTTPS            | TLS, keepalive, headers                       | Service integrity and performance        |
+| WebSocket networking  | Long-lived connections, backpressure          | Capacity planning and stability          |
+| Reverse proxies       | Nginx, HAProxy, routing                       | Traffic control and security             |
+| Load balancing basics | L4/L7, health checks, failover                | Resilience and scale                     |
 
 ## System and Network Flow (Conceptual)
 
@@ -116,13 +182,13 @@ flowchart LR
 
 ## Weekly and Day-wise Learning Structure
 
-| Week | Daily focus (Mon-Fri) | Output |
-| --- | --- | --- |
-| 1 | Day 1: Filesystems and permissions<br>Day 2: Processes and signals<br>Day 3: Memory and swap<br>Day 4: Scheduling and limits<br>Day 5: Services and boot | Notes + baseline operational notes |
-| 2 | Day 1: Logging systems<br>Day 2: Journal queries<br>Day 3: Log rotation and retention<br>Day 4: Kernel messages<br>Day 5: Operational logging patterns | Log diagnostics guide |
-| 3 | Day 1: DNS and resolution path<br>Day 2: TCP/IP handshake and timeouts<br>Day 3: Ports and socket states<br>Day 4: Firewall rules and routing<br>Day 5: Network debugging tools | Network debugging checklist |
-| 4 | Day 1: HTTP/HTTPS semantics<br>Day 2: TLS behavior and failure modes<br>Day 3: Reverse proxy basics<br>Day 4: WebSockets and long-lived connections<br>Day 5: Load balancing concepts | Service path diagrams |
-| 5 | Day 1: SSH hardening<br>Day 2: Service recovery patterns<br>Day 3: Resource exhaustion drills<br>Day 4: Debugging playbooks<br>Day 5: Incident simulation | Incident notes and learnings |
+| Week | Daily focus (Mon-Fri)                                                                                                                                                                 | Output                             |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| 1    | Day 1: Filesystems and permissions<br>Day 2: Processes and signals<br>Day 3: Memory and swap<br>Day 4: Scheduling and limits<br>Day 5: Services and boot                              | Notes + baseline operational notes |
+| 2    | Day 1: Logging systems<br>Day 2: Journal queries<br>Day 3: Log rotation and retention<br>Day 4: Kernel messages<br>Day 5: Operational logging patterns                                | Log diagnostics guide              |
+| 3    | Day 1: DNS and resolution path<br>Day 2: TCP/IP handshake and timeouts<br>Day 3: Ports and socket states<br>Day 4: Firewall rules and routing<br>Day 5: Network debugging tools       | Network debugging checklist        |
+| 4    | Day 1: HTTP/HTTPS semantics<br>Day 2: TLS behavior and failure modes<br>Day 3: Reverse proxy basics<br>Day 4: WebSockets and long-lived connections<br>Day 5: Load balancing concepts | Service path diagrams              |
+| 5    | Day 1: SSH hardening<br>Day 2: Service recovery patterns<br>Day 3: Resource exhaustion drills<br>Day 4: Debugging playbooks<br>Day 5: Incident simulation                             | Incident notes and learnings       |
 
 ## Practical Experiments
 
@@ -179,13 +245,13 @@ curl -I https://example.com
 
 ## Progress Tracking
 
-| Area | Status | Evidence |
-| --- | --- | --- |
-| Linux internals | In progress | [notes.md](notes.md), [experiments/](experiments/) |
-| Process and service management | In progress | [commands.md](commands.md) |
-| DNS and TCP/IP | Planned | [experiments/](experiments/) |
-| Proxies and load balancing | Planned | [diagrams/](diagrams/) |
-| Operational drills | Planned | [learnings.md](learnings.md) |
+| Area                           | Status      | Evidence                                           |
+| ------------------------------ | ----------- | -------------------------------------------------- |
+| Linux internals                | In progress | [notes.md](notes.md), [experiments/](experiments/) |
+| Process and service management | In progress | [commands.md](commands.md)                         |
+| DNS and TCP/IP                 | Planned     | [experiments/](experiments/)                       |
+| Proxies and load balancing     | Planned     | [diagrams/](diagrams/)                             |
+| Operational drills             | Planned     | [learnings.md](learnings.md)                       |
 
 Progress is reflected in Git history and updates to [notes.md](notes.md), [learnings.md](learnings.md), and [mistakes.md](mistakes.md).
 
@@ -195,4 +261,3 @@ Progress is reflected in Git history and updates to [notes.md](notes.md), [learn
 - Expand failure simulation coverage with repeatable scripts.
 - Publish deeper TCP diagnostics and kernel tuning notes.
 - Build a dedicated section for WebSocket and streaming workloads.
-

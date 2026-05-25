@@ -42,18 +42,18 @@ Observability and reliability determine whether systems are operable in producti
 
 This index links to living artifacts as they are published.
 
-| Artifact | Purpose | Status |
-| --- | --- | --- |
-| [notes.md](notes.md) | Operational guidance and references | Active |
-| [commands.md](commands.md) | Curated queries and commands | Active |
-| [learnings.md](learnings.md) | Key insights and tradeoffs | Active |
-| [mistakes.md](mistakes.md) | Pitfalls and corrections | Active |
-| [experiments/](experiments/) | Signal validation and drills | Planned |
-| [diagrams/](diagrams/) | Visibility and workflow diagrams | Planned |
-| [dashboards/](dashboards/) | Dashboards and panels | Planned |
-| [alerts/](alerts/) | Alert rules and thresholds | Planned |
-| [runbooks/](runbooks/) | Incident response guides | Planned |
-| [scripts/](scripts/) | Analysis helpers | Planned |
+| Artifact                     | Purpose                             | Status  |
+| ---------------------------- | ----------------------------------- | ------- |
+| [notes.md](notes.md)         | Operational guidance and references | Active  |
+| [commands.md](commands.md)   | Curated queries and commands        | Active  |
+| [learnings.md](learnings.md) | Key insights and tradeoffs          | Active  |
+| [mistakes.md](mistakes.md)   | Pitfalls and corrections            | Active  |
+| [experiments/](experiments/) | Signal validation and drills        | Planned |
+| [diagrams/](diagrams/)       | Visibility and workflow diagrams    | Planned |
+| [dashboards/](dashboards/)   | Dashboards and panels               | Planned |
+| [alerts/](alerts/)           | Alert rules and thresholds          | Planned |
+| [runbooks/](runbooks/)       | Incident response guides            | Planned |
+| [scripts/](scripts/)         | Analysis helpers                    | Planned |
 
 ## Why Observability Matters
 
@@ -81,11 +81,11 @@ This index links to living artifacts as they are published.
 
 ## Core Signals: Metrics, Logs, Traces
 
-| Signal | Purpose | Operational value |
-| --- | --- | --- |
-| Metrics | Quantitative system behavior | SLO tracking and alerting |
-| Logs | Event context and details | Root cause evidence |
-| Traces | Request path visibility | Latency and dependency analysis |
+| Signal  | Purpose                      | Operational value               |
+| ------- | ---------------------------- | ------------------------------- |
+| Metrics | Quantitative system behavior | SLO tracking and alerting       |
+| Logs    | Event context and details    | Root cause evidence             |
+| Traces  | Request path visibility      | Latency and dependency analysis |
 
 ## Tooling Stack
 
@@ -173,12 +173,12 @@ flowchart LR
 
 ## Progress Tracking
 
-| Area | Status | Evidence |
-| --- | --- | --- |
-| Metrics and dashboards | In progress | [notes.md](notes.md) |
-| Logging strategy | Planned | [learnings.md](learnings.md) |
-| Tracing and dependency mapping | Planned | [diagrams/](diagrams/) |
-| Incident response workflow | Planned | [mistakes.md](mistakes.md) |
+| Area                           | Status      | Evidence                     |
+| ------------------------------ | ----------- | ---------------------------- |
+| Metrics and dashboards         | In progress | [notes.md](notes.md)         |
+| Logging strategy               | Planned     | [learnings.md](learnings.md) |
+| Tracing and dependency mapping | Planned     | [diagrams/](diagrams/)       |
+| Incident response workflow     | Planned     | [mistakes.md](mistakes.md)   |
 
 Progress is reflected in Git history and updates to [notes.md](notes.md), [learnings.md](learnings.md), and [mistakes.md](mistakes.md).
 
@@ -188,4 +188,3 @@ Progress is reflected in Git history and updates to [notes.md](notes.md), [learn
 - Expand SLO coverage across service tiers.
 - Add automated incident detection and annotation workflows.
 - Document rollback engineering patterns and recovery playbooks.
-

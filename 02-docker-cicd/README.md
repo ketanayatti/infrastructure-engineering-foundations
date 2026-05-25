@@ -46,15 +46,15 @@ Containers and CI/CD are the backbone of modern delivery systems. This module fo
 
 This index links to living artifacts as they are published.
 
-| Artifact | Purpose | Status |
-| --- | --- | --- |
-| [notes.md](notes.md) | Design decisions and operational references | Active |
-| [commands.md](commands.md) | Curated commands with context | Active |
-| [learnings.md](learnings.md) | Key insights and tradeoffs | Active |
-| [mistakes.md](mistakes.md) | Pitfalls and corrections | Active |
-| [experiments/](experiments/) | Build and deployment trials | Planned |
-| [diagrams/](diagrams/) | Architecture and pipeline visuals | Planned |
-| [scripts/](scripts/) | Automation helpers | Planned |
+| Artifact                     | Purpose                                     | Status  |
+| ---------------------------- | ------------------------------------------- | ------- |
+| [notes.md](notes.md)         | Design decisions and operational references | Active  |
+| [commands.md](commands.md)   | Curated commands with context               | Active  |
+| [learnings.md](learnings.md) | Key insights and tradeoffs                  | Active  |
+| [mistakes.md](mistakes.md)   | Pitfalls and corrections                    | Active  |
+| [experiments/](experiments/) | Build and deployment trials                 | Planned |
+| [diagrams/](diagrams/)       | Architecture and pipeline visuals           | Planned |
+| [scripts/](scripts/)         | Automation helpers                          | Planned |
 
 ## Production Deployment Perspective
 
@@ -164,13 +164,13 @@ flowchart LR
 
 ## Learning Roadmap
 
-| Phase | Focus | Output |
-| --- | --- | --- |
-| 1 | Container basics and lifecycle | Image and runtime notes |
-| 2 | Docker networking and storage | Experiments and diagrams |
-| 3 | CI/CD pipeline fundamentals | Pipeline flow diagrams |
-| 4 | Release strategies and rollback | Operational notes |
-| 5 | Reliability during deployment | Failure analysis notes |
+| Phase | Focus                           | Output                   |
+| ----- | ------------------------------- | ------------------------ |
+| 1     | Container basics and lifecycle  | Image and runtime notes  |
+| 2     | Docker networking and storage   | Experiments and diagrams |
+| 3     | CI/CD pipeline fundamentals     | Pipeline flow diagrams   |
+| 4     | Release strategies and rollback | Operational notes        |
+| 5     | Reliability during deployment   | Failure analysis notes   |
 
 ## Experiments
 
@@ -201,12 +201,12 @@ flowchart LR
 
 ## Progress Tracking
 
-| Area | Status | Evidence |
-| --- | --- | --- |
-| Container fundamentals | In progress | [notes.md](notes.md) |
-| Image lifecycle and supply chain | Planned | [diagrams/](diagrams/) |
-| CI/CD pipeline design | Planned | [experiments/](experiments/) |
-| Deployment safety patterns | Planned | [learnings.md](learnings.md) |
+| Area                             | Status      | Evidence                     |
+| -------------------------------- | ----------- | ---------------------------- |
+| Container fundamentals           | In progress | [notes.md](notes.md)         |
+| Image lifecycle and supply chain | Planned     | [diagrams/](diagrams/)       |
+| CI/CD pipeline design            | Planned     | [experiments/](experiments/) |
+| Deployment safety patterns       | Planned     | [learnings.md](learnings.md) |
 
 Progress is reflected in Git history and updates to [notes.md](notes.md), [learnings.md](learnings.md), and [mistakes.md](mistakes.md).
 
@@ -216,4 +216,3 @@ Progress is reflected in Git history and updates to [notes.md](notes.md), [learn
 - Expand release strategies to canary and progressive delivery.
 - Include reproducibility checks with build provenance.
 - Document failure injection techniques for deployment testing.
-
